@@ -1,12 +1,11 @@
-import os
 import sys
 
 import ollama
 from flask import Flask, jsonify, request
 from flask_cors import CORS
 
-sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
-from  import SYSTEM_PROMPT
+sys.path.insert(0, "/home/vniverse77/Projects/Vniverse-AI")
+from personality import SYSTEM_PROMPT
 
 app = Flask(__name__)
 CORS(app)
@@ -49,5 +48,5 @@ def health():
 
 
 if __name__ == "__main__":
-    print("✓ Vniverse-AI backend starting on port 8000...")
+    print("Vniverse-AI backend starting on port 8000...")
     app.run(host="0.0.0.0", port=8000)
